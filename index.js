@@ -24,7 +24,7 @@ import  routerColor from './router/ColorRouter.js';
 
 import { sequelize } from "./db/conexion.js";
 
-const _PORT = PORT || 3000;
+const _PORT = process.env.PORT ;
 const app = express();
 import path from 'path';
 app.use(express.json());
