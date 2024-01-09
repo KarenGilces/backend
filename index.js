@@ -23,11 +23,8 @@ import  routerTipoVehiculo from './router/TipoVehiculoRouter.js';
 import  routerColor from './router/ColorRouter.js';
 
 import { sequelize } from "./db/conexion.js";
-const dotenv = require("dotenv");
-dotenv.config();
-const express = require("express");
-const _PORT = process.env.PORT;
 
+const _PORT = process.env.PORT;
 const app = express();
 import path from 'path';
 app.use(express.json());
