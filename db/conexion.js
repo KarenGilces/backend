@@ -1,28 +1,14 @@
 import { Sequelize } from 'sequelize';
-import {DB_CONNECTION, DB_USERNAME, DB_PASSWORD,DB_HOST,DB_DATABASE} from '../config/config.js';
-// Option 3: Passing parameters separately (other dialects)
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export const sequelize = new Sequelize(
-    DB_DATABASE,
-    DB_USERNAME,
-    DB_PASSWORD,
+    process.env.DB_DATABASE,
+    process.env.DB_USERNAME,
+    process.env.DB_PASSWORD,
     {
-        host: DB_HOST,
-        dialect: DB_CONNECTION
+        host: process.env.DB_HOST,
+        dialect: process.env.DB_CONNECTION
     }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
