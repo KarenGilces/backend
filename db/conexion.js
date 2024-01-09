@@ -7,9 +7,10 @@ export const sequelize = new Sequelize(
     DB_PASSWORD,
     {
         host: DB_HOST,
-        dialect: DB_CONNECTION
+        dialect: 'mysql' // Asegúrate de tener el dialecto correcto para tu base de datos
     }
 );
+
 
 
 
