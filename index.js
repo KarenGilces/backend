@@ -60,7 +60,7 @@ app.use('/imagenes', express.static(staticRoute));
 const main = async () => {
     try {
         await sequelize.authenticate();
-        console.log('Base de datos conectada correctamente.');
+        console.log('Base de datos conectada correctamente....');
         await sequelize.sync({ force: false })
         app.listen(_PORT, () => {
             console.log(`Servidor corriendo en el puerto => ${_PORT}`);
